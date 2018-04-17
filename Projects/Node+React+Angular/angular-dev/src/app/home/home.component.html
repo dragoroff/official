@@ -1,0 +1,12 @@
+
+<div id="main-container">
+
+    <div id="band" class="container text-center">
+        <h1>Welcome to our {{storeInfo?.storeName}}</h1>
+        <img [src]="storeInfo?.mainImage" />
+        <div id="address-info">
+            <div>{{storeInfo?.address?.localInfo()}}</div>
+            <app-country-info [country]="storeInfo?.address"></app-country-info>
+        </div>
+    </div>
+</div>

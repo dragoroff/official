@@ -1,0 +1,16 @@
+img{
+    height:50px;
+}
+
+.navbar-header,#myNavbar{
+    padding: 20px;
+}
+
+span{
+    color:rgba(255,255,255,0.8);
+    font-size: 1.2em;
+}
+a{
+    font-size: 1.3em;
+    font-weight: 700;
+}

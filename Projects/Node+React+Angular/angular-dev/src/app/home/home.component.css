@@ -1,0 +1,16 @@
+
+img{
+    max-width: 600px;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+
+#address-info{
+    padding-top: 90px;
+}
+.container {
+    padding: 10px 120px;
+}

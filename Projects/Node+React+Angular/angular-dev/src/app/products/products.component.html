@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Our books:</h2>
+  <label for="bookFilter">Search book:</label>
+  <input name="bookFilter" #bookFilterInput>
+
+  <button (click)="searchBooks(bookFilterInput.value)"> search</button>
+
+
+  <div class="row">
+    <div class="col-md-3 book-container" *ngFor="let x of bookList">
+      <div class="thumbnail">
+        <div class="caption">
+          <app-product-preview [bookPreview]="x"></app-product-preview>
+          <p>
+            <button (click)="showFullDetail(x['_id'])">show full details</button>
+          </p>
+        </div>
+      </div>
+    </div>

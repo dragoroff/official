@@ -1,0 +1,11 @@
+<div class="container text-center">
+    <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" />
+    <h1>{{book?.volumeInfo?.title}}</h1>
+    <h2> {{book?.volumeInfo?.subtitle}}</h2>
+    <hr/>
+    <p><em [innerHtml]="book?.volumeInfo?.description"></em></p>
+    <strong *ngIf="book?.volumeInfo?.authors">authors: {{book?.volumeInfo?.authors}}</strong>
+    <strong *ngIf="book?.saleInfo?.listPrice?.amount">price: {{book?.saleInfo?.listPrice?.amount}}</strong>
+    <hr/>
+    <button (click)="goBack()">Back to products</button>
+</div>

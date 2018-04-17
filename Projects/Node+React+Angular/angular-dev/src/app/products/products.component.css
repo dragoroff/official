@@ -1,0 +1,22 @@
+.thumbnail .caption{
+    padding: 8px !important;
+}
+.thumbnail{
+    margin-bottom :0px;
+}
+.book-container{
+    min-height: 400px;
+    max-height: 400px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 8px !important;
+    margin: 15px;
+}
+
+h2{
+    text-align: center;
+    font-size:3em;
+}
+.container {
+    padding: 0px;
+}

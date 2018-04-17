@@ -1,0 +1,27 @@
+
+.panel{
+    min-width: 400px !important;
+    max-width: 400px !important;
+    display: inline-block;
+}
+
+.panel-default>.panel-heading {
+    color: #ffffff;
+    background-color: #2d2d30;
+    border-color: #2d2d30;
+    text-align: left;
+}
+
+.well-sm{
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2d2d30;
+    margin: 20px;
+    margin-right: 5px;
+
+}
+a{
+    text-decoration: none;
+}

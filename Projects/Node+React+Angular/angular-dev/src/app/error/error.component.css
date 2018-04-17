@@ -1,0 +1,9 @@
+div {
+min-width: 300px;
+margin-top: 25px;
+}
+
+.alert-danger{
+    padding: 2px;
+    padding-left: 20px;
+}

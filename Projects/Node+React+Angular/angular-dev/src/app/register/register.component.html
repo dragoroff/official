@@ -1,0 +1,52 @@
+<form novalidate [formGroup]="registerForm">
+
+
+  <div class="form-group">
+    <label>First Name:</label>
+    <input type="text" class="form-control" formControlName="firstName" />
+    <app-error [controlParam]="registerForm.controls['firstName']"></app-error>
+  </div>
+
+  <div class="form-group">
+    <label>Last Name:</label>
+    <input type="text" class="form-control" formControlName="lastName" />
+    <app-error [controlParam]="registerForm.controls['lastName']"></app-error>
+  </div>
+
+  <div class="form-group">
+    <label>User Name:</label>
+    <input type="text" class="form-control" formControlName="userName" />
+    <app-error [controlParam]="registerForm.controls['userName']"></app-error>
+  </div>
+
+  <div class="form-group">
+    <label>Password:</label>
+    <input type="password" class="form-control" formControlName="password" />
+    <app-error [controlParam]="registerForm.controls['password']"></app-error>
+  </div>
+
+
+
+  <div *ngIf="countryList?.length">
+    <label>Country:</label>
+    <div class="dropdown">
+      <button (click)="setCountryMode()">
+        <app-country-info [country]="selectedCountry"></app-country-info>
+      </button>
+
+      <ul *ngIf="selectCountryMode">
+        <li *ngFor="let x of countryList">
+          <app-country-info [country]="x" (onSelectCountry)="setUserCountry($event)"></app-country-info>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <p>{{errorMsg}}</p>
+  <div>
+    <input class="form-control btn btn-default" (click)="registerUser()" type="submit" value="Register" [disabled]="!registerForm.valid" />
+  </div>
+
+</form>

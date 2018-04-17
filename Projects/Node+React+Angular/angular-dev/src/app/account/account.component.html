@@ -1,0 +1,26 @@
+<div class="text-center">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a  class="well well-sm" routerLink="/bookStore/account/login" *ngIf="!isLogedIn.state" (click)="tabState='Login'">Login</a>
+                <a class="well well-sm" routerLink="/bookStore/account/register" *ngIf="!isLogedIn.state" (click)="tabState='Register'">Register</a>
+                <a class="well well-sm" href="javascript:void(0)" *ngIf="isLogedIn.state" (click)="logOutUser()">Logout</a>
+            </div>
+            
+            <div class="panel-body">
+                <div *ngIf="isLogedIn.state">
+                    <h2>{{user.fullName}}</h2>
+                    <span>
+                        <img [src]="user.userUrlAvatar" />
+
+                    </span>
+                </div>
+
+                <div *ngIf="!isLogedIn.state">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+
+        </div>
+    </div>
+

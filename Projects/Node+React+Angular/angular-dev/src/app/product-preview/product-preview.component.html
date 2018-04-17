@@ -1,0 +1,16 @@
+<h2>
+    {{bookPreview.volumeInfo?.title|appStringShort:15}}
+</h2>
+<hr/>
+<img [src]="bookPreview.volumeInfo?.imageLinks?.smallThumbnail" />
+<p>
+    language: {{bookPreview.volumeInfo?.language}}
+</p>
+<p>
+    authors:
+    <span *ngIf="bookPreview.volumeInfo?.authors">{{bookPreview.volumeInfo?.authors.toString()|appStringShort:15}}</span>
+    <span *ngIf="!bookPreview.volumeInfo?.authors">unknown</span>
+</p>
+<p>
+    published date: {{ (bookPreview.volumeInfo?.publishedDate)? bookPreview.volumeInfo?.publishedDate : 'unknown' }}
+</p>
