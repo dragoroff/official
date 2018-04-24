@@ -59,7 +59,7 @@ class Person extends Component {
                     <Col xs={6} md={3}>
                         <Button 
                             bsStyle="success" className="button" onClick={this.toggle}>
-                                Update
+                                 <span style={{marginRight:"10px", marginLeft:"10px"}}>Edit</span>
                         </Button>
                         <Button bsStyle="danger" className="button" onClick={this.onDelete.bind(this, id)}>Delete</Button>
                     </Col>
