@@ -1,0 +1,259 @@
+@media (min-device-width: 1201px){
+  .left {
+    background:
+     linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+  .app {
+    background-image: url('./assets/photo_desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+@media (max-device-width: 1200px) and (min-device-width: 901px){
+  .app {
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+    top:0;
+    left:0;
+    background-image: url('./assets/photo_desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }  
+
+  .left {
+    background:
+     linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  .logo {
+    margin-top: -10%;
+  }
+  .mainHeader {
+    font-size: 2.0rem;
+  }
+}
+@media (max-device-width: 900px) and (min-device-width: 600px){
+
+  .app {
+    background-image: url('./assets/photo_desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 120vh;
+  }
+  #left {
+    height: 120vh;
+    background:
+     linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+  .mainHeader {
+    font-size: 2.0rem;
+  }
+  #description {
+    font-size: 1.3rem;
+  }
+  .smaller-elements {
+    margin-top: auto;
+    line-height: 1.0;
+    margin-bottom: auto; 
+  }
+  
+}
+@media (max-device-width: 599px) and (min-device-width: 400px) {
+
+  .app {
+    background-size: cover;
+    background-image: url('./assets/photo_mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+  }
+  #wrapper {
+    text-align: center;
+    height: 120vh;
+    width: 100vw;
+    background:
+    linear-gradient(
+     rgba(0, 0, 0, 0.3), 
+     rgba(0, 0, 0, 0.3)
+   );
+  }
+  #mainHeader {
+    margin-top: -10%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+  }
+  #description {
+    margin-top: 10%;
+    margin-left: 25%;
+    font-size: 1.0rem;
+  }
+  .logo {
+    margin-top: -30%;
+  }
+  #circle {
+    margin-left: -15%;
+  } 
+  #button {
+    margin-top: -15%;
+  }
+}
+
+@media (max-device-width: 399px) and (min-device-width: 200px) {
+
+  .app {
+    background-size: cover;
+    background-image: url('./assets/photo_mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    width: 120vw;
+  }
+  #wrapper {
+    text-align: center;
+    height: 150vh;
+    background:
+    linear-gradient(
+     rgba(0, 0, 0, 0.3), 
+     rgba(0, 0, 0, 0.3)
+   );
+  }
+  #mainHeader {
+    margin-top: -10%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+  }
+  #description {
+    margin-top: 10%;
+    margin-left: 25%;
+    font-size: 1.0rem;
+  }
+  .logo {
+    margin-top: -30%;
+  }
+  #circle {
+    margin-bottom: 25%;
+    margin-left: -15%;
+  } 
+  #button {
+    margin-top: -15%;
+  }
+}
+
+
+@media (max-device-width: 399px) and (min-device-width: 200px) and 
+(max-device-height: 700px) and (min-device-height: 600px) {
+  #mainHeader {
+    font-size: 2.5rem;
+  }
+  #description {
+    font-size: 1.5rem;
+  }
+  #wrapper {
+    height: 180vh;
+  }
+  #circle {
+    margin-left: -25%;
+  } 
+}
+
+@media (max-device-width: 420px) and (min-device-width: 300px) and 
+(max-device-height: 900px) and (min-device-height: 700px) {
+  #mainHeader {
+    font-size: 3.0rem;
+  }
+  #description {
+    font-size: 2.0rem;
+  }
+  #wrapper {
+    height: 200vh;
+  }
+  #circle {
+    margin-left: -20%;
+  } 
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100vh; 
+}
+.left {
+  flex: 1 0 50%;
+  font-size: 3rem;
+}
+
+.mainHeader {
+  margin-top: 85px;
+  font-family: Arial;
+  width: 65%;
+  color: white;
+  line-height: 1.0;
+}
+.mainPart {
+  margin: 35px;
+}
+
+.description {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-family: Lato;
+  width: 50%;
+  color: rgb(175, 175, 175);
+}
+
+.right {
+  margin-left: auto;
+  flex-basis: 50%;
+  background-color: transparent; 
+  align-self: center;
+}
+
+.circle {
+    background: #000000;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    color: rgb(28, 218, 248);
+}
+
+.smaller-elements {
+  margin-top: 50px;
+  line-height: 1.0;
+  margin-bottom: 20px; 
+}
+
+.mbites {
+  font-size: 3rem;
+  line-height: 1.0; 
+}
+.percents {
+  margin-left: 35px;
+}
+.savings {
+  margin-left: 25px;
+}
+.smaller {
+  margin-left: -15px;
+}
+.photos {
+  margin-left: -20px;
+}
