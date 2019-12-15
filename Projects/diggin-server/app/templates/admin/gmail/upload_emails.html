@@ -1,0 +1,95 @@
+{% extends "admin/index.html" %}
+
+<!-- LOADING -->
+{% load i18n grp_tags log %}
+
+<!-- COLTYPE/BODYCLASS-- >
+{% block bodyclass %}dashboard{% endblock %}
+{% block content-class %}content-grid{% endblock %}
+
+{% block extrastyle %}
+<style>
+body.loading #exec, body.done #exec{display:none !important;}
+body.loading .loader{display:block;}
+.show_done{display:none;}
+body.done .show_done{display:block;padding:4px 0;}
+.loader{display:none;text-align:center;}
+</style>
+{% endblock %}
+
+{% block extrahead %}
+<script src="/static/js/lib/jquery.min.js"></script>
+{% endblock %}
+
+<!-- BREADCRUMBS -->
+{% block breadcrumbs %}
+<ul class="grp-horizontal-list">
+  <li><a href="/root">{% trans "Home" %}</a></li>
+  <li>{% trans "Upload" %}</li>
+</ul>
+{% endblock %} {% block content_title %}
+<header><h1>Upload Gmails</h1></header>
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+<p>
+  <strong>The name of columns must strongly be in next form:</strong><br />
+  Email, Password, Phone, Recovery
+</p>
+<p>
+  <strong>The file's type must be XLSX</strong>
+</p>
+
+<hr />
+
+{% if step == '1' %}
+<h4>1. Upload excel file</h4>
+<div>
+  <form
+    action="/root/upload/gmails"
+    method="post"
+    enctype="multipart/form-data"
+    onsubmit="return confirm('Are you sure???')"
+  >
+    <input type="file" name="fuXlsx" id="fuXlsx" />
+    <input type="submit" value="Upload" />
+    {% csrf_token %}
+  </form>
+</div>
+{% if errors %}
+<div>
+  <b>Error: {{ errors }}</b>
+</div>
+{% endif %} {% endif %} {% if step == '2' %} {% if errors %}
+<h4>Error: {{ errors }}</h4>
+{% else %}
+<h4>
+  SUCCESS! The following emails has been created ({{ emails | length }}
+  emails):
+</h4>
+<table width="100%" cellspacing="0" cellpadding="5">
+  <thead>
+    <td>Email</td>
+    <td>Email Pass</td>
+    <td>Sec. Email</td>
+    <td>Phone</td>
+  </thead>
+  <tbody>
+    {% for email in emails %}
+    <tr>
+      <td>{{ email.email }}</td>
+      <td>{{ email.password }}</td>
+      <td>{{ email.recovery }}</td>
+      <td>{{ email.phone }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<hr />
+<div>
+  Errors ({{ errors | length }}): {% for er in errors %}
+  <div>{{ er }}</div>
+  {% endfor %}
+</div>
+{% endif %} {% endif %} {% endblock %}

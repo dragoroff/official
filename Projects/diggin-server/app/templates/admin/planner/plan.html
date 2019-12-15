@@ -1,0 +1,116 @@
+{% extends "admin/index.html" %}
+
+<!-- LOADING -->
+{% load i18n grp_tags log %}
+
+<!-- COLTYPE/BODYCLASS-- >
+{% block bodyclass %}dashboard{% endblock %}
+{% block content-class %}content-grid{% endblock %}
+
+{% block extrastyle %}
+<style>
+body.loading #exec, body.done #exec{display:none !important;}
+body.loading .loader{display:block;}
+.show_done{display:none;}
+body.done .show_done{display:block;padding:4px 0;}
+.loader{display:none;text-align:center;}
+</style>
+{% endblock %}
+
+{% block extrahead %}
+<script src="/static/js/lib/jquery.min.js"></script>
+{% endblock %}
+
+<!-- BREADCRUMBS -->
+{% block breadcrumbs %}
+<ul class="grp-horizontal-list">
+  <li><a href="/root">{% trans "Home" %}</a></li>
+  <li>{% trans "Planner" %}</li>
+</ul>
+{% endblock %} {% block content_title %}
+
+    {% if step == '1' %}
+    <header><h1>Add Plan</h1></header>
+         {% if error %}
+            <div style="margin: 15px; margin-left: 0; color:red">
+                <h1>
+                    Failure: {{ error }}
+                </h1>
+            </div>
+        {% endif %}
+        <form method="post">
+            <label for="accounts"><h2>How many accounts do you want?</h2></label>
+            <input name="accounts" type="number" placeholder="Accounts" style="display: block" required/><br/>
+            <label for="threshold"><h2>How many friends do you want?</h2></label>
+            <input name="threshold" placeholder="Threshold" type="number" style="display: block" required/><br/>
+            <label for="name_location"><h2>Choose locations to cover</h2></label>
+{#            <textarea style="display: block" name="name_location" placeholder="Name & Location to search" required></textarea></br>#}
+            <div  style="display: block; margin-bottom: 10px">
+                <label for="sf">San Francisco</label>
+                <input id="sf" name="locations" value="San Francisco" type="checkbox">
+                 <label for="ld">London</label>
+                <input id="ld" name="locations" value="London" type="checkbox">
+                 <label for="ta">Tel Aviv</label>
+                <input id="ta" name="locations" value="Tel Aviv" type="checkbox">
+                <label for="sp">Singapore</label>
+                <input id="sp" name="locations" value="Singapore" type="checkbox">
+                <br>
+                <label for="se">Greater Seattle Area</label>
+                <input id="se" name="locations" value="Greater Seattle Area" type="checkbox">
+                 <label for="at">Greater Atlanta Area</label>
+                <input id="at" name="locations" value="Greater Atlanta Area" type="checkbox">
+                 <label for="dt">Greater Detroit Area</label>
+                <input id="dt" name="locations" value="Greater Detroit Area" type="checkbox">
+                <label for="ws">Washington D.C. Metro Area</label>
+                <input id="ws" name="locations" value="Washington D.C. Metro Area" type="checkbox">
+                 <br>
+                <label for="ny">Greater New York City Area</label>
+                <input id="ny" name="locations" value="Greater New York City Area" type="checkbox">
+                 <label for="la">Greater Los Angeles Area</label>
+                <input id="la" name="locations" value="Greater Los Angeles Area" type="checkbox">
+                 <label for="th">Thailand</label>
+                <input id="th" name="locations" value="Thailand" type="checkbox">
+                <label for="ml">Malaysia</label>
+                <input id="ml" name="locations" value="Malaysia" type="checkbox">
+                 <br>
+                <label for="ind">Indonesia</label>
+                <input id="ind" name="locations" value="Indonesia" type="checkbox">
+                 <label for="bg">Bangkok</label>
+                <input id="bg" name="locations" value="Bangkok" type="checkbox">
+                 <label for="ph">Phuket</label>
+                <input id="ph" name="locations" value="Phuket" type="checkbox">
+                <label for="uk">United Kingdom</label>
+                <input id="uk" name="locations" value="United Kingdom" type="checkbox">
+                 <br>
+                <label for="ir">Ireland</label>
+                <input id="ir" name="locations" value="Ireland" type="checkbox">
+                 <label for="aus">Australia</label>
+                <input id="aus" name="locations" value="Australia" type="checkbox">
+                 <label for="hk">Hong Kong</label>
+                <input id="hk" name="locations" value="Hong Kong" type="checkbox">
+                <label for="ch">China</label>
+                <input id="ch" name="locations" value="China" type="checkbox">
+
+            <input type="submit" placeholder="Submit"/>
+        </form>
+    {% endif %}
+
+    {% if step == '2' %}
+            <div style="margin: 15px; margin-left: 0; color:green">
+                {% if num_accounts == 1 %}
+                <h1>
+                    Success: {{ num_accounts }} account have been created!
+                </h1>
+                {% else %}
+                     <h1>
+                    Success: {{ num_accounts }} accounts have been created!
+                </h1>
+                {% endif %}
+            </div>
+    {% endif %}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+{% endblock %}

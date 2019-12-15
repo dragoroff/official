@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Campaign</title>
+</head>
+<body>
+<form id="campaignForm" method="POST">
+    <div id="container">
+        <p>Add campaign ID:</p>
+        <input type="text" placeholder="Enter Campaign ID" id="campaign" name="campaign" required>
+        <input type="text" placeholder="Enter Domain Name" id="domain" name="domain" required>
+        <button type="submit" formaction="http://localhost:3000/add-campaign" id="addField">Add To Campaigns</button>
+        <button type="submit" formaction="http://localhost:3000/remove-campaign" id="removeField">Remove From Campaigns</button>
+    </div>
+</form>
+if Status
+    h3(style={color:'green'})= Status
+    h4= ID
+
+if error
+    h3(style={color:'red'})= error
+
+div(style={margin: '125px'})
+    table
+        each id, i in ids
+            tr
+                td= id
+                td= domains[i]
+</body>
+</html>

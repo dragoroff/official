@@ -1,0 +1,13 @@
+html
+    head
+        title="Stats"
+    body
+        table
+            tr
+                each val in fields
+                    th= val
+
+                each value in data
+                    tr
+                        each v, k in value
+                            td= v
