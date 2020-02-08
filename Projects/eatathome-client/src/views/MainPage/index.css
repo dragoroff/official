@@ -1,0 +1,58 @@
+#login-btn {
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 1.5em;
+}
+
+.mainBack {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  top: 40%;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 30px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.main-button {
+  text-transform: capitalize;
+  padding: 30px 58px !important;
+  background-color: rgba(100, 76, 255, 0.774) !important;
+  font-size: x-large !important;
+  font-family: "Neothic";
+  border: none !important;
+  width: 60%;
+  margin-left: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+  #login-btn {
+    position: fixed;
+    bottom: 5%;
+    width: 80%;
+    padding: 10px 10px;
+  }
+
+  .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+  }
+
+  .main-button {
+    padding: 10px 10px !important;
+    width: 100%;
+    margin-left: 0;
+  }
+}

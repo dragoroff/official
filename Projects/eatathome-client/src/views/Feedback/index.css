@@ -1,0 +1,61 @@
+.component-feedback {
+  background-image: url("https://res.cloudinary.com/eat-at-home/image/upload/c_scale,w_1080/v1580226087/feedback/lp-form-bg_mfighv.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+#text-section {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: ivory;
+  text-align: end;
+  font-size: 2em !important;
+}
+
+#subscribe-form {
+  top: 20%;
+}
+
+#success-box {
+  position: fixed;
+  top: 30%;
+}
+
+#success-icon {
+  color: green;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .component-feedback {
+    background-image: url("https://res.cloudinary.com/eat-at-home/image/upload/c_scale,w_720/v1580205532/feedback/lp-form-bg-small_uy8nsr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120vh;
+    width: 100vw;
+  }
+
+  #success-box {
+    width: 93%;
+  }
+
+  #subscribe-form {
+    top: 20%;
+  }
+
+  #logo {
+    width: 30%;
+  }
+
+  #form-button {
+    padding: 5px 15px !important;
+    margin: 5px !important;
+  }
+
+  .form-group {
+    margin-top: 1% !important;
+  }
+}

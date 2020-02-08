@@ -1,0 +1,9 @@
+.sso-buttons {
+  width: 150%;
+}
+
+@media only screen and (max-width: 768px) {
+  .sso-buttons {
+    width: 100%;
+  }
+}

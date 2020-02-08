@@ -1,0 +1,113 @@
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  z-index: 1;
+}
+
+#button-cook {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  color: #f1f1f1;
+}
+
+#final-section {
+  text-align: center;
+  margin-top: 3em !important;
+  overflow-x: hidden;
+}
+
+.cookBack {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 100%;
+  width: 100%;
+  min-height: 1px;
+}
+
+.cook {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    Helvetica Neue, sans-serif !important;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.section {
+  margin-top: 6em !important;
+}
+
+#head-title {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  color: #f1f1f1;
+  width: 100%;
+}
+
+button {
+  text-transform: capitalize !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #logo-cook {
+    width: 20%;
+  }
+
+  #final-section {
+    font-size: 2em;
+    margin: 5%;
+  }
+
+  #button-cook {
+    position: relative;
+    width: 90%;
+    margin-left: 2em;
+    margin-top: 5%;
+    padding: 10px 22px !important;
+  }
+
+  #button-cook-end {
+    padding: 10px 22px !important;
+  }
+
+  #head-title {
+    position: absolute;
+    text-align: center;
+    top: 28%;
+    left: 15%;
+    color: #f1f1f1;
+    width: 70%;
+    font-size: 2.5em !important;
+  }
+
+  .advan-card {
+    width: 80%;
+    height: 90%;
+    margin-left: 2em;
+  }
+
+  .advan-card .card-title {
+    margin-top: -10%;
+  }
+
+  .scheme-card {
+    width: 80%;
+    margin-left: 2em;
+  }
+
+  .scheme-card img {
+    height: 20rem !important;
+  }
+
+  .scheme-card .card-body {
+    padding: 5%;
+  }
+
+  .scheme-card p {
+    margin-top: -10%;
+  }
+}
